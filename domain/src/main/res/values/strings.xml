@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="connect_error">Error de conexion</string>
+    <string name="unknown_host_error">No se ha encontrado el destino</string>
+    <string name="socket_time_out_error">Agotado el tiempo de espera</string>
+    <string name="unknown_network_error">Error desconocido</string>
+</resources>
