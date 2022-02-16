@@ -1,0 +1,28 @@
+plugins {
+    id(Plugins.ANDROID_LIBRARY)
+    id(Plugins.KOTLIN_ANDROID)
+    id(Plugins.JETBRAINS_KOTLIN)
+}
+
+android {
+    compileSdk = ConfigApp.COMPILE_SDK
+    defaultConfig {
+        minSdk = ConfigApp.MIN_SDK
+        targetSdk = ConfigApp.TARGET_SDK
+    }
+    viewBinding {
+        isEnabled = true
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+dependencies {
+    implementation(project(Modules.DOMAIN))
+
+    implementation(Dependencies.Androidx.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.Androidx.APPCOMPAT)
+    implementation(Dependencies.Androidx.FRAGMENT)
+}
