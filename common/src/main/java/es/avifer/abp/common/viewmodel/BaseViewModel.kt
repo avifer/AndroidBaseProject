@@ -1,0 +1,83 @@
+package es.avifer.abp.common.viewmodel
+
+import androidx.annotation.StringRes
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import es.avifer.abp.common.util.runInIO
+import es.avifer.abp.common.util.runInMain
+import es.avifer.abp.domain.entities.response.ExceptionInfo
+import es.avifer.abp.domain.entities.response.Response
+import es.avifer.abp.domain.entities.response.getStringError
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+
+open class BaseViewModel : ViewModel() {
+    var defaultErrorNotification: LiveData<Int> = MutableLiveData()
+    var defaultWaitingNotification: LiveData<Boolean> = MutableLiveData()
+}
+
+fun <T> BaseViewModel.defaultResponse(
+    block: suspend () -> Flow<Response<T>>
+): MutableLiveData<T?> {
+    val mutableLiveDataResult = MutableLiveData<T?>()
+    runInIO {
+        block().collect {
+            when (it) {
+                is Response.Error -> {
+                    postError(it.getStringError())
+                }
+                is Response.Successful -> {
+                    postSuccessful(it.data, mutableLiveDataResult)
+                }
+                is Response.Loading -> {
+                    postLoading(true)
+                }
+            }
+        }
+    }
+    return mutableLiveDataResult
+}
+
+fun <T> BaseViewModel.executeWithListeners(
+    successful: suspend (successful: T?) -> Unit,
+    error: suspend (error: ExceptionInfo) -> Unit,
+    loading: suspend (loading: Boolean) -> Unit,
+    block: suspend () -> Flow<Response<T>>,
+) {
+    runInIO {
+        block().collect {
+            when (it) {
+                is Response.Error -> {
+                    runInMain {
+                        error(it.error)
+                        loading(false)
+                    }
+                }
+                is Response.Successful -> {
+                    runInMain {
+                        successful(it.data)
+                        loading(false)
+                    }
+                }
+                is Response.Loading -> {
+                    runInMain { loading(it.loading) }
+                }
+            }
+        }
+    }
+}
+
+fun <T> BaseViewModel.postSuccessful(data: T, mutableLiveDataResult: MutableLiveData<T?>) {
+    mutableLiveDataResult.postValue(data)
+    postLoading(false)
+}
+
+fun BaseViewModel.postError(@StringRes idError: Int) {
+    (defaultErrorNotification as? MutableLiveData)?.postValue(idError)
+    postLoading(false)
+}
+
+fun BaseViewModel.postLoading(loading: Boolean) {
+    (defaultWaitingNotification as? MutableLiveData)?.postValue(loading)
+}
