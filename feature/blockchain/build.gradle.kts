@@ -24,12 +24,13 @@ java {
 dependencies {
     implementation(project(Modules.COMMON))
     implementation(project(Modules.DOMAIN))
+    implementation(project(Modules.NAVIGATION))
+
+    implementation(Dependencies.Androidx.FRAGMENT)
 
     implementation(Dependencies.Androidx.LIFECYCLE_RUNTIME_KOTLIN)
     implementation(Dependencies.Androidx.CONSTRAINT_LAYOUT)
     implementation(Dependencies.Androidx.SWIPE_REFRESH)
-
-    implementation(Dependencies.Androidx.FRAGMENT)
 
     implementation(Dependencies.Androidx.NAVIGATION_FRAGMENT_KOTLIN)
     implementation(Dependencies.Androidx.NAVIGATION_UI_KOTLIN)
