@@ -3,4 +3,5 @@
     <string name="fragment_home__label__local_price__text">Ultimo precio</string>
     <string name="fragment_home__toolbar__toolbar__title">Blockchain</string>
     <string name="icon_money">%s €</string>
+    <string name="icon_dolar">%s $</string>
 </resources>
