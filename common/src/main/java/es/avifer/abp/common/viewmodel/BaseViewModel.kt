@@ -54,35 +54,6 @@ fun <T> BaseViewModel.defaultResponse(
     return mutableLiveDataResult
 }
 
-fun <T> BaseViewModel.executeWithListeners(
-    successful: suspend (successful: T?) -> Unit,
-    error: suspend (error: ExceptionInfo) -> Unit,
-    loading: suspend (loading: Boolean) -> Unit,
-    block: suspend () -> Flow<Response<T>>,
-) {
-    runInIO {
-        block().collect {
-            when (it) {
-                is Response.Error -> {
-                    runInMain {
-                        error(it.error)
-                        loading(false)
-                    }
-                }
-                is Response.Successful -> {
-                    runInMain {
-                        successful(it.data)
-                        loading(false)
-                    }
-                }
-                is Response.Loading -> {
-                    runInMain { loading(it.loading) }
-                }
-            }
-        }
-    }
-}
-
 fun <T> BaseViewModel.postSuccessful(data: T, mutableLiveDataResult: MutableLiveData<T?>) {
     mutableLiveDataResult.postValue(data)
     postLoading(false)
@@ -95,4 +66,36 @@ fun BaseViewModel.postError(@StringRes idError: Int) {
 
 fun BaseViewModel.postLoading(loading: Boolean) {
     (defaultWaitingNotification as? MutableLiveData)?.postValue(loading)
+}
+
+fun <T> BaseViewModel.executeWithListeners(
+    successful: suspend (successful: T?) -> Unit,
+    error: suspend (error: ExceptionInfo) -> Unit,
+    loading: suspend (loading: Boolean) -> Unit,
+    enableDefaultLoading: Boolean = true,
+    block: suspend () -> Flow<Response<T>>,
+) {
+    runInIO {
+        block().collect {
+            runInMain {
+                when (it) {
+                    is Response.Error -> {
+                        error(it.error)
+                        if (enableDefaultLoading) {
+                            loading(false)
+                        }
+                    }
+                    is Response.Successful -> {
+                        successful(it.data)
+                        if (enableDefaultLoading) {
+                            loading(false)
+                        }
+                    }
+                    is Response.Loading -> {
+                        loading(it.loading)
+                    }
+                }
+            }
+        }
+    }
 }

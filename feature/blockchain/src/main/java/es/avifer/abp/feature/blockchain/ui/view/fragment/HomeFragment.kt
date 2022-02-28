@@ -3,6 +3,7 @@ package es.avifer.abp.feature.blockchain.ui.view.fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.StringRes
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import es.avifer.abp.common.extensions.toFormatTwoDecimal
@@ -54,18 +55,18 @@ class HomeFragment : BaseFragment() {
 
     private fun FragmentHomeBinding.setDataCrypto(cryptoBo: CryptoBo) {
         setNameCrypto(cryptoBo.name)
-        setRemotePrice(cryptoBo.priceOnline)
-        setLocalPrice(cryptoBo.priceOffline)
+        setRemotePrice(cryptoBo.priceOnline, R.string.icon_dolar)
+        setLocalPrice(cryptoBo.priceOffline, R.string.icon_dolar)
     }
 
-    private fun FragmentHomeBinding.setLocalPrice(price: Double?) {
+    private fun FragmentHomeBinding.setLocalPrice(price: Double?, @StringRes idIconMoney: Int) {
         fragmentHomeLabelLocalPriceEdit.text =
-            getString(R.string.icon_money, price?.toFormatTwoDecimal())
+            getString(idIconMoney, price?.toFormatTwoDecimal())
     }
 
-    private fun FragmentHomeBinding.setRemotePrice(price: Double?) {
+    private fun FragmentHomeBinding.setRemotePrice(price: Double?, @StringRes idIconMoney: Int) {
         fragmentHomeLabelOnlinePriceEdit.text =
-            getString(R.string.icon_money, price?.toFormatTwoDecimal())
+            getString(idIconMoney, price?.toFormatTwoDecimal())
     }
 
     private fun FragmentHomeBinding.setNameCrypto(name: String) {
