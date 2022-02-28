@@ -2,6 +2,7 @@ object Classpaths {
 
     object Android {
         const val TOOLS_BUILD_GRADLE = "com.android.tools.build:gradle:7.0.4"
+        const val NAVIGATION_SAFE_ARGS = "androidx.navigation:navigation-safe-args-gradle-plugin:2.4.1"
     }
 
     object Jetbrains {

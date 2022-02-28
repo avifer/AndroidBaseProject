@@ -5,13 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.annotation.IdRes
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import es.avifer.abp.common.R
 import es.avifer.abp.common.viewmodel.BaseViewModel
+import es.avifer.abp.navigation.Navigation
+import es.avifer.abp.navigation.Navigation.Back
+import es.avifer.abp.navigation.Navigation.ToDirection
 
 abstract class BaseFragment : Fragment() {
 
@@ -20,6 +22,8 @@ abstract class BaseFragment : Fragment() {
     open var binding: ViewBinding? = null
 
     abstract fun getBindingCast(): ViewBinding?
+
+    protected abstract fun onViewReady(savedInstanceState: Bundle?)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +39,23 @@ abstract class BaseFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initDefaultObserverWaiting()
         initDefaultObserverError()
+        observeNavigation()
+        onViewReady(savedInstanceState)
+    }
+
+    private fun observeNavigation() {
+        viewModel.getNavigation().observe(viewLifecycleOwner) {
+            it.getContentIfNotHandled()?.let { navigation ->
+                handleNavigation(navigation)
+            }
+        }
+    }
+
+    private fun handleNavigation(navCommand: Navigation) {
+        when (navCommand) {
+            is ToDirection -> findNavController().navigate(navCommand.directions)
+            is Back -> findNavController().navigateUp()
+        }
     }
 
     open fun initDefaultObserverWaiting() {
@@ -54,10 +75,6 @@ abstract class BaseFragment : Fragment() {
     }
 
     private fun getHostActivity() = requireActivity() as? BaseActivity
-
-    fun navigate(@IdRes idNav: Int) {
-        findNavController().navigate(idNav)
-    }
 
     override fun onDestroyView() {
         binding = null
