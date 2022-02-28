@@ -4,17 +4,32 @@ import androidx.annotation.StringRes
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.navigation.NavDirections
 import es.avifer.abp.common.util.runInIO
 import es.avifer.abp.common.util.runInMain
 import es.avifer.abp.domain.entities.response.ExceptionInfo
 import es.avifer.abp.domain.entities.response.Response
 import es.avifer.abp.domain.entities.response.getStringError
+import es.avifer.abp.navigation.Event
+import es.avifer.abp.navigation.Navigation
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 
 open class BaseViewModel : ViewModel() {
     var defaultErrorNotification: LiveData<Int> = MutableLiveData()
     var defaultWaitingNotification: LiveData<Boolean> = MutableLiveData()
+
+    private val navigation = MutableLiveData<Event<Navigation>>()
+
+    fun getNavigation() = navigation as LiveData<Event<Navigation>>
+
+    fun navigate(navDirections: NavDirections) {
+        navigation.postValue(Event(Navigation.ToDirection(navDirections)))
+    }
+
+    fun navigateBack() {
+        navigation.postValue(Event(Navigation.Back))
+    }
 }
 
 fun <T> BaseViewModel.defaultResponse(

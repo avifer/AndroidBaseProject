@@ -4,6 +4,7 @@ plugins {
     id(Plugins.KOTLIN_KAPT)
     id(Plugins.DAGGER_HILT)
     id(Plugins.JETBRAINS_KOTLIN)
+    id(Plugins.NAVIGATION_SAFEARGS)
 }
 
 android {
@@ -35,14 +36,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        compose = true
-    }
     viewBinding {
         isEnabled = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = Versions.COMPOSE
     }
 }
 
@@ -54,24 +49,15 @@ dependencies {
     implementation(project(Modules.FEATURE_SPLASH))
     implementation(project(Modules.FEATURE_BLOCKCHAIN))
 
-    implementation(Dependencies.Material.MATERIAL)
-
-    implementation(Dependencies.Androidx.CONSTRAINT_LAYOUT)
-
     implementation(Dependencies.Androidx.CORE_KOTLIN)
-    implementation(Dependencies.Androidx.COMPOSE_UI)
-    implementation(Dependencies.Androidx.COMPOSE_UI_TOOLING_PREVIEW)
-    implementation(Dependencies.Androidx.COMPOSE_MATERIAL)
-    implementation(Dependencies.Androidx.ACTIVITY_COMPOSE)
-    debugImplementation(Dependencies.Androidx.COMPOSE_UI_TOOLING)
 
     implementation(Dependencies.Androidx.LIFECYCLE_RUNTIME_KOTLIN)
+    implementation(Dependencies.Material.MATERIAL)
+    implementation(Dependencies.Androidx.CONSTRAINT_LAYOUT)
     implementation(Dependencies.Androidx.APPCOMPAT)
 
     implementation(Dependencies.Androidx.NAVIGATION_FRAGMENT_KOTLIN)
     implementation(Dependencies.Androidx.NAVIGATION_UI_KOTLIN)
-
-    implementation(Dependencies.Androidx.DATA_STORAGE_PREFERENCES)
 
     implementation(Dependencies.Androidx.ROOM_RUNTIME)
     implementation(Dependencies.Androidx.ROOM_KTX)

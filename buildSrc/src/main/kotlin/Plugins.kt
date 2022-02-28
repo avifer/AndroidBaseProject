@@ -7,4 +7,5 @@ object Plugins {
     const val JETBRAINS_KOTLIN = "org.jetbrains.kotlin.android"
     const val JAVA_LIBRARY = "java-library"
     const val JETBRAINS_KOTLIN_JAVA = "org.jetbrains.kotlin.jvm"
+    const val NAVIGATION_SAFEARGS = "androidx.navigation.safeargs.kotlin"
 }

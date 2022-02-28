@@ -21,6 +21,7 @@ java {
 }
 dependencies {
     implementation(project(Modules.DOMAIN))
+    implementation(project(Modules.NAVIGATION))
 
     implementation(Dependencies.Androidx.CONSTRAINT_LAYOUT)
     implementation(Dependencies.Androidx.APPCOMPAT)

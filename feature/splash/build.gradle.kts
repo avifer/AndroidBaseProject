@@ -2,6 +2,7 @@ plugins {
     id(Plugins.ANDROID_LIBRARY)
     id(Plugins.KOTLIN_ANDROID)
     id(Plugins.JETBRAINS_KOTLIN)
+    id(Plugins.NAVIGATION_SAFEARGS)
 }
 
 android {
