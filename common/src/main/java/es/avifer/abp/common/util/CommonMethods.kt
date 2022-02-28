@@ -15,3 +15,19 @@ fun runInMain(block: suspend () -> Unit) {
         block()
     }
 }
+
+fun runDelayMain(delay: Long, block: () -> Unit) {
+    runInIO {
+        Thread.sleep(delay)
+        runInMain {
+            block()
+        }
+    }
+}
+
+fun runDelayIO(delay: Long, block: () -> Unit) {
+    runInIO {
+        Thread.sleep(delay)
+        block()
+    }
+}

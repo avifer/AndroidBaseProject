@@ -17,8 +17,7 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_7
 }
 
-dependencies{
-    implementation(project(Modules.FEATURE_BLOCKCHAIN))
+dependencies {
     implementation(Dependencies.Androidx.NAVIGATION_FRAGMENT_KOTLIN)
     implementation(Dependencies.Androidx.NAVIGATION_UI_KOTLIN)
 }

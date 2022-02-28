@@ -16,14 +16,16 @@ android {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
 }
 dependencies {
-    implementation(project(Modules.DOMAIN))
+    implementation(project(Modules.COMMON))
+    implementation(project(Modules.NAVIGATION))
 
+    implementation(Dependencies.Androidx.LIFECYCLE_RUNTIME_KOTLIN)
     implementation(Dependencies.Androidx.CONSTRAINT_LAYOUT)
-    implementation(Dependencies.Androidx.APPCOMPAT)
+
     implementation(Dependencies.Androidx.FRAGMENT)
 
     implementation(Dependencies.Androidx.NAVIGATION_FRAGMENT_KOTLIN)
