@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.annotation.IdRes
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import es.avifer.abp.common.R
 import es.avifer.abp.common.viewmodel.BaseViewModel
@@ -52,6 +54,10 @@ abstract class BaseFragment : Fragment() {
     }
 
     private fun getHostActivity() = requireActivity() as? BaseActivity
+
+    fun navigate(@IdRes idNav: Int) {
+        findNavController().navigate(idNav)
+    }
 
     override fun onDestroyView() {
         binding = null

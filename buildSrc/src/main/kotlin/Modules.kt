@@ -7,5 +7,6 @@ object Modules {
     const val DOMAIN = ":domain"
     const val FEATURE = ":feature"
     const val FEATURE_BLOCKCHAIN = ":feature:blockchain"
+    const val FEATURE_SPLASH = ":feature:splash"
     const val NAVIGATION = ":navigation"
 }

@@ -24,6 +24,7 @@ java {
 dependencies {
     implementation(project(Modules.COMMON))
     implementation(project(Modules.DOMAIN))
+    implementation(project(Modules.NAVIGATION))
 
     implementation(Dependencies.Androidx.LIFECYCLE_RUNTIME_KOTLIN)
     implementation(Dependencies.Androidx.CONSTRAINT_LAYOUT)
