@@ -43,8 +43,8 @@ android {
 
 dependencies {
     implementation(project(Modules.COMMON))
+    implementation(project(Modules.DATA))
     implementation(project(Modules.DOMAIN))
-    implementation(project(Modules.CORE))
     implementation(project(Modules.NAVIGATION))
     implementation(project(Modules.FEATURE_SPLASH))
     implementation(project(Modules.FEATURE_BLOCKCHAIN))
