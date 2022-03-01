@@ -1,4 +1,4 @@
-package es.avifer.abp.core
+package es.avifer.abp.di
 
 import android.content.Context
 import androidx.room.Room
@@ -10,7 +10,6 @@ import dagger.hilt.components.SingletonComponent
 import es.avifer.abp.data.local.DatabaseApp
 import es.avifer.abp.data.local.blockchain.dao.BlockchainDao
 import javax.inject.Singleton
-
 
 @Module
 @InstallIn(SingletonComponent::class)

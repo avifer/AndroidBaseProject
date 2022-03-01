@@ -1,4 +1,4 @@
-package es.avifer.abp.core
+package es.avifer.abp
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
