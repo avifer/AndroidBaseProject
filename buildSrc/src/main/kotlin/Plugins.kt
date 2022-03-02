@@ -8,4 +8,6 @@ object Plugins {
     const val JAVA_LIBRARY = "java-library"
     const val JETBRAINS_KOTLIN_JAVA = "org.jetbrains.kotlin.jvm"
     const val NAVIGATION_SAFEARGS = "androidx.navigation.safeargs.kotlin"
+    const val GMS_GOOGLE_SERVICES = "com.google.gms.google-services"
+    const val FIREBASE_CRASHLYTICS = "com.google.firebase.crashlytics"
 }

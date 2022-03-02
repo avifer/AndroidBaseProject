@@ -43,6 +43,8 @@ object Versions {
         const val GSON = "2.9.0"
         const val HILT_ANDROID = "2.40.5"
         const val HILT_ANDROID_COMPILER = "2.40.5"
+        const val FIREBASE_CRASHLYTICS = "18.2.8"
+        const val FIREBASE_ANALYTICS = "20.1.0"
     }
 
 }
