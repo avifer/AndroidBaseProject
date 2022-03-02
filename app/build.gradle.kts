@@ -1,3 +1,9 @@
+import FunctionsGradle.SignConfig.RELEASE
+import FunctionsGradle.getFileStore
+import FunctionsGradle.getKeyAlias
+import FunctionsGradle.getKeyPassword
+import FunctionsGradle.getStorePassword
+
 plugins {
     id(Plugins.ANDROID_APPLICATION)
     id(Plugins.KOTLIN_ANDROID)
@@ -23,13 +29,32 @@ android {
             useSupportLibrary = true
         }
     }
+    signingConfigs {
+        create("release") {
+            storeFile = getFileStore(RELEASE)
+            storePassword = getStorePassword(RELEASE)
+            keyAlias = getKeyAlias(RELEASE)
+            keyPassword = getKeyPassword(RELEASE)
+        }
+    }
     buildTypes {
-        getByName("release") {
+        getByName("debug") {
             isMinifyEnabled = false
+            isDebuggable = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
+        }
+        getByName("release") {
+            isMinifyEnabled = false
+            isDebuggable = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
