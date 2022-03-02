@@ -5,10 +5,13 @@ plugins {
     id(Plugins.DAGGER_HILT)
     id(Plugins.JETBRAINS_KOTLIN)
     id(Plugins.NAVIGATION_SAFEARGS)
+    id(Plugins.GMS_GOOGLE_SERVICES)
+    id(Plugins.FIREBASE_CRASHLYTICS)
 }
 
 android {
     compileSdk = ConfigApp.COMPILE_SDK
+    buildToolsVersion = ConfigApp.BUILD_TOOLS_VERSION
     defaultConfig {
         applicationId = ConfigApp.APPLICATION_ID
         minSdk = ConfigApp.MIN_SDK
@@ -58,6 +61,9 @@ dependencies {
 
     implementation(Dependencies.Androidx.NAVIGATION_FRAGMENT_KOTLIN)
     implementation(Dependencies.Androidx.NAVIGATION_UI_KOTLIN)
+
+    implementation(Dependencies.Google.FIREBASE_CRASHLYTICS)
+    implementation(Dependencies.Google.FIREBASE_ANALYTICS)
 
     implementation(Dependencies.Androidx.ROOM_RUNTIME)
     implementation(Dependencies.Androidx.ROOM_KTX)

@@ -11,6 +11,8 @@ object Classpaths {
 
     object Google {
         const val DAGGER_HILT_ANDROID_GRADLE = "com.google.dagger:hilt-android-gradle-plugin:2.40.5"
+        const val GMS_GOOGLE_SERVICES = "com.google.gms:google-services:4.3.10"
+        const val FIREBASE_CRASHLYTICS = "com.google.firebase:firebase-crashlytics-gradle:2.8.1"
     }
 
 }

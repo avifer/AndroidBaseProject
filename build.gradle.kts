@@ -8,6 +8,8 @@ buildscript {
         classpath(Classpaths.Android.NAVIGATION_SAFE_ARGS)
         classpath(Classpaths.Jetbrains.KOTLIN_GRADLE_PLUGIN)
         classpath(Classpaths.Google.DAGGER_HILT_ANDROID_GRADLE)
+        classpath(Classpaths.Google.GMS_GOOGLE_SERVICES)
+        classpath(Classpaths.Google.FIREBASE_CRASHLYTICS)
     }
 }
 
