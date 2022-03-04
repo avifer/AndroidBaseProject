@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import es.avifer.abp.common.view.BaseFragment
+import es.avifer.abp.common.view.getVersionName
+import es.avifer.abp.common.view.openAppInGooglePlay
 import es.avifer.abp.feature.splash.databinding.FragmentSplashBinding
 import es.avifer.abp.feature.splash.ui.viewmodel.SplashFragmentViewModel
 
@@ -18,7 +20,7 @@ class SplashFragment : BaseFragment() {
         FragmentSplashBinding.inflate(inflater, container, false)
 
     override fun onViewReady(savedInstanceState: Bundle?) {
-        viewModel.goToBlockchain()
+        viewModel.goToBlockchain(getVersionName()) { openAppInGooglePlay() }
     }
 
 }
