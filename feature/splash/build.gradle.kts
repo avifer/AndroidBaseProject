@@ -22,7 +22,16 @@ java {
 }
 dependencies {
     implementation(project(Modules.COMMON))
-    implementation(project(Modules.NAVIGATION))
+
+    implementation(Dependencies.Androidx.COMPOSE_UI)
+    implementation(Dependencies.Androidx.COMPOSE_UI_TOOLING_PREVIEW)
+    implementation(Dependencies.Androidx.ACTIVITY_COMPOSE)
+    implementation(Dependencies.Androidx.COMPOSE_MATERIAL)
+
+    implementation("androidx.compose.material:material-icons-extended:1.4.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+
 
     implementation(Dependencies.Androidx.LIFECYCLE_RUNTIME_KOTLIN)
     implementation(Dependencies.Androidx.CONSTRAINT_LAYOUT)

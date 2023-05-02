@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.activity.ComponentActivity
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -13,10 +14,9 @@ import es.avifer.abp.common.extensions.show
 import es.avifer.abp.common.view.BaseActivity.Companion.URL_INTENT_MARKET
 import es.avifer.abp.common.view.BaseActivity.Companion.URL_INTENT_PLAY_STORE
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : ComponentActivity() {
 
     companion object {
-        private const val INIT_PROGRESS_BAR = 0
         const val URL_INTENT_PLAY_STORE = "https://play.google.com/store/apps/details?id="
         const val URL_INTENT_MARKET = "market://details?id="
     }
@@ -26,27 +26,6 @@ abstract class BaseActivity : AppCompatActivity() {
             packageManager.getPackageInfo(packageName, 0).versionName
         } catch (e: Exception) {
             ""
-        }
-    }
-
-    abstract var viewLoading: ConstraintLayout?
-    abstract var progressBarLoading: ProgressBar?
-
-    private fun showLoading() {
-        viewLoading?.show()
-        progressBarLoading?.startNestedScroll(INIT_PROGRESS_BAR)
-    }
-
-    private fun hideLoading() {
-        viewLoading?.hide()
-        progressBarLoading?.stopNestedScroll()
-    }
-
-    fun visibilityLoading(visible: Boolean) {
-        if (visible) {
-            showLoading()
-        } else {
-            hideLoading()
         }
     }
 

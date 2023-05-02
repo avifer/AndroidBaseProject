@@ -14,12 +14,10 @@ class SplashFragment : BaseFragment() {
 
     override val viewModel by viewModels<SplashFragmentViewModel>()
 
-    override fun getBindingCast() = binding as? FragmentSplashBinding
-
     override fun getInflateBinding(inflater: LayoutInflater, container: ViewGroup?) =
         FragmentSplashBinding.inflate(inflater, container, false)
 
-    override fun onViewReady(savedInstanceState: Bundle?) {
+    fun onViewReady(savedInstanceState: Bundle?) {
         viewModel.goToBlockchain(getVersionName()) { openAppInGooglePlay() }
     }
 

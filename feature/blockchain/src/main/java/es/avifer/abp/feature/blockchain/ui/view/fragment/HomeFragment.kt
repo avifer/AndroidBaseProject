@@ -1,6 +1,5 @@
 package es.avifer.abp.feature.blockchain.ui.view.fragment
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.StringRes
@@ -8,9 +7,7 @@ import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import es.avifer.abp.common.extensions.toFormatTwoDecimal
 import es.avifer.abp.common.view.BaseFragment
-import es.avifer.abp.common.view.toast
 import es.avifer.abp.domain.entities.blockchain.CryptoBo
-import es.avifer.abp.domain.entities.response.getStringError
 import es.avifer.abp.feature.blockchain.R
 import es.avifer.abp.feature.blockchain.databinding.FragmentHomeBinding
 import es.avifer.abp.feature.blockchain.ui.viewmodel.HomeFragmentViewModel
@@ -24,16 +21,11 @@ class HomeFragment : BaseFragment() {
 
     override val viewModel by viewModels<HomeFragmentViewModel>()
 
-    override fun getBindingCast() = binding as? FragmentHomeBinding
-
     override fun getInflateBinding(inflater: LayoutInflater, container: ViewGroup?) =
         FragmentHomeBinding.inflate(inflater, container, false)
 
-    override fun onViewReady(savedInstanceState: Bundle?) {
-        getPriceBtc()
-        configureSwipeRefresh()
-    }
 
+    /*
     private fun configureSwipeRefresh() {
         getBindingCast()?.fragmentHomeSwipeRefresh?.setOnRefreshListener {
             viewModel.getDataCryptoListeners(
@@ -52,6 +44,8 @@ class HomeFragment : BaseFragment() {
             }
         }
     }
+
+     */
 
     private fun FragmentHomeBinding.setDataCrypto(cryptoBo: CryptoBo) {
         setNameCrypto(cryptoBo.name)

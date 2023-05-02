@@ -2,22 +2,33 @@ package es.avifer.abp
 
 import android.os.Bundle
 import android.widget.ProgressBar
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
 import androidx.constraintlayout.widget.ConstraintLayout
 import dagger.hilt.android.AndroidEntryPoint
+import es.avifer.abp.common.theme.MyApplicationTheme
 import es.avifer.abp.common.view.BaseActivity
 import es.avifer.abp.common.view.toast
+import es.avifer.abp.feature.splash.ui.view.Splash
 
 @AndroidEntryPoint
 class HostActivity : BaseActivity() {
 
-    override var viewLoading: ConstraintLayout? = null
-    override var progressBarLoading: ProgressBar? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_host)
-        viewLoading = findViewById(R.id.activity_host__view__loading)
-        progressBarLoading = findViewById(R.id.loading_screen__progress_bar__loading)
+        setContent {
+            MyApplicationTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(
+                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
+                ) {
+                    Splash()
+                }
+            }
+        }
         toast(R.string.app_name)
     }
 

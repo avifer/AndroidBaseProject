@@ -24,7 +24,6 @@ java {
 dependencies {
     implementation(project(Modules.COMMON))
     implementation(project(Modules.DOMAIN))
-    implementation(project(Modules.NAVIGATION))
 
     implementation(Dependencies.Androidx.FRAGMENT)
 
