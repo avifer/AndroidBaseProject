@@ -11,14 +11,14 @@ plugins {
     id(Plugins.KOTLIN_KAPT)
     id(Plugins.DAGGER_HILT)
     id(Plugins.JETBRAINS_KOTLIN)
-    id(Plugins.NAVIGATION_SAFEARGS)
     id(Plugins.GMS_GOOGLE_SERVICES)
     id(Plugins.FIREBASE_CRASHLYTICS)
 }
 
 android {
+    namespace = ConfigApp.APPLICATION_ID
     compileSdk = ConfigApp.COMPILE_SDK
-    buildToolsVersion = ConfigApp.BUILD_TOOLS_VERSION
+
     defaultConfig {
         applicationId = ConfigApp.APPLICATION_ID
         minSdk = ConfigApp.MIN_SDK
@@ -63,6 +63,7 @@ android {
             signingConfig = signingConfigs.getByName("release")
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -70,8 +71,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    viewBinding {
-        isEnabled = true
+    buildFeatures {
+        compose = true
     }
 }
 
@@ -82,9 +83,9 @@ dependencies {
     implementation(project(Modules.FEATURE_SPLASH))
     implementation(project(Modules.FEATURE_BLOCKCHAIN))
 
-    implementation("androidx.core:core-ktx:1.10.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
-    implementation("androidx.activity:activity-compose:1.7.1")
+    implementation("androidx.core:core-ktx:1.8.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation("androidx.activity:activity-compose:1.5.1")
     implementation(platform("androidx.compose:compose-bom:2022.10.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
@@ -98,12 +99,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    implementation(Dependencies.Material.MATERIAL)
-    implementation(Dependencies.Androidx.CONSTRAINT_LAYOUT)
-    implementation(Dependencies.Androidx.APPCOMPAT)
-
-    implementation(Dependencies.Androidx.NAVIGATION_FRAGMENT_KOTLIN)
-    implementation(Dependencies.Androidx.NAVIGATION_UI_KOTLIN)
 
     implementation(Dependencies.Google.FIREBASE_CRASHLYTICS)
     implementation(Dependencies.Google.FIREBASE_ANALYTICS)
