@@ -7,20 +7,28 @@ plugins {
 }
 
 android {
+    namespace = "es.avifer.abp.feature.blockchain"
     compileSdk = ConfigApp.COMPILE_SDK
     defaultConfig {
         minSdk = ConfigApp.MIN_SDK
         targetSdk = ConfigApp.TARGET_SDK
     }
-    viewBinding {
-        isEnabled = true
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.3.2"
     }
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
-}
 dependencies {
     implementation(project(Modules.COMMON))
     implementation(project(Modules.DOMAIN))
