@@ -1,4 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fragment_splash__img__splash_logo__size">200dp</dimen>
+    <dimen name="fragment_home__label__local_price_edit__margin_top">16dp</dimen>
+    <dimen name="fragment_home__label__local_price_edit__text_size">18sp</dimen>
+    <dimen name="fragment_home__linear__local_price__margin_top">16dp</dimen>
+    <dimen name="fragment_home__label__online_price_edit__margin_top">16dp</dimen>
+    <dimen name="fragment_home__label__online_price_edit__text_size">18sp</dimen>
+    <dimen name="fragment_home__label__online_price__text_size">24sp</dimen>
+    <dimen name="fragment_home__label__local_price__text_size">24sp</dimen>
+    <dimen name="fragment_home__linear__online_price__margin_top">16dp</dimen>
+    <dimen name="fragment_home__label__name_crypto__margin_top">16dp</dimen>
+    <dimen name="fragment_home__toolbar__toolbar__height_toolbar">56dp</dimen>
+    <dimen name="fragment_home__toolbar__toolbar__padding_start">16dp</dimen>
+    <dimen name="fragment_home__label__name_crypto__text_size">28sp</dimen>
+
+    <dimen name="height__toolbar">56dp</dimen>
+    <dimen name="height__bottom_app_bar">56dp</dimen>
+
+    <dimen name="fragment_select_login__img_logo__height">252dp</dimen>
+    <dimen name="fragment_select_login__img_logo__margin_start">36dp</dimen>
+    <dimen name="fragment_select_login__img_logo__margin_top">52dp</dimen>
+    <dimen name="fragment_select_login__img_logo__margin_end">36dp</dimen>
+    <dimen name="fragment_select_login__img_logo__margin_bottom">52dp</dimen>
+    <dimen name="fragment_select_login__input_layout__email__height">54dp</dimen>
+    <dimen name="fragment_select_login__input_layout__email__margin_start">36dp</dimen>
+    <dimen name="fragment_select_login__input_layout__email__margin_end">36dp</dimen>
+    <dimen name="fragment_select_login__input_layout__password__height">54dp</dimen>
+    <dimen name="fragment_select_login__input_layout__password__magin_start">36dp</dimen>
+    <dimen name="fragment_select_login__input_layout__password__magin_top">16dp</dimen>
+    <dimen name="fragment_select_login__input_layout__password__magin_end">36dp</dimen>
+    <dimen name="fragment_select_login__btn__login__height">60dp</dimen>
+    <dimen name="fragment_select_login__btn__login__margin_start">36dp</dimen>
+    <dimen name="fragment_select_login__btn__login__margin_top">32dp</dimen>
+    <dimen name="fragment_select_login__btn__login__margin_end">36dp</dimen>
+    <dimen name="fragment_select_login__btn__login_google__height">60dp</dimen>
+    <dimen name="fragment_select_login__btn__login_google__margin_start">36dp</dimen>
+    <dimen name="fragment_select_login__btn__login_google__margin_top">32dp</dimen>
+    <dimen name="fragment_select_login__btn__login_google__margin_end">36dp</dimen>
+    <dimen name="fragment_select_login__linear__signin__margin_top">24dp</dimen>
+    <dimen name="fragment_select_login__linear__signin__margin_bottom">24dp</dimen>
+    <dimen name="fragment_select_login__label__signin__margin_start">8dp</dimen>
+
+    <dimen name="fragment_presentation_on_boarding__img__main__margin_start">24dp</dimen>
+    <dimen name="fragment_presentation_on_boarding__img__main__margin_top">60dp</dimen>
+    <dimen name="fragment_presentation_on_boarding__img__main__margin_end">24dp</dimen>
+    <dimen name="fragment_presentation_on_boarding__img__main__margin_bottom">40dp</dimen>
+    <dimen name="fragment_presentation_on_boarding__label__title__height">68dp</dimen>
+    <dimen name="fragment_presentation_on_boarding__label__description__margin_start">24dp</dimen>
+    <dimen name="fragment_presentation_on_boarding__label__description__margin_end">24dp</dimen>
+    <dimen name="fragment_presentation_on_boarding__label__description__margin_bottom">60dp</dimen>
+    <dimen name="fragment_presentation_on_boarding__img__main__height">300dp</dimen>
+    <dimen name="fragment_presentation_on_boarding__label__title__margin_start">24dp</dimen>
+    <dimen name="fragment_presentation_on_boarding__label__title__margin_end">24dp</dimen>
+
+    <dimen name="fragment_first_data_on_boarding__img__main__height">300dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__img__main__margin_start">24dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__img__main__margin_top">40dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__img__main__margin_end">24dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__need_create_wallet__margin_start">24dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__need_create_wallet__margin_top">24dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__need_create_wallet__margin_end">24dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__need_create_wallet__margin_bottom">24dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__need_create_wallet__padding">8dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__text_layout__name_wallet__height">78dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__text_layout__balance_wallet__height">78dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__text_layout__balance_wallet__margin_bottom">50dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__previous__margin_start">24dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__previous__margin_bottom">24dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__previous__padding">8dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__next__margin_end">24dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__next__margin_bottom">24dp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__next__padding">8dp</dimen>
+
+    <dimen name="fragment_signup_with_email__img_logo__height">252dp</dimen>
+    <dimen name="fragment_signup_with_email__img_logo__margin_start">36dp</dimen>
+    <dimen name="fragment_signup_with_email__img_logo__margin_end">36dp</dimen>
+    <dimen name="fragment_signup_with_email__img_logo__margin_top">52dp</dimen>
+    <dimen name="fragment_signup_with_email__img_logo__margin_bottom">52dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__password__height">54dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__confirm_password__height">54dp</dimen>
+    <dimen name="fragment_signup_with_email__btn__signup__height">60dp</dimen>
+    <dimen name="fragment_signup_with_email__btn__signup_google__height">60dp</dimen>
+    <dimen name="fragment_signup_with_email__linear__signin__margin_top">24dp</dimen>
+    <dimen name="fragment_signup_with_email__label__login__margin_start">8dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__emai__height">54dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__email__margin_start">36dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__email__margin_end">36dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__password__margin_start">36dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__password__margin_top">16dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__password__margin_end">36dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__confirm_password__margin_start">36dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__confirm_password__margin_top">16dp</dimen>
+    <dimen name="fragment_signup_with_email__input_layout__confirm_password__margin_end">36dp</dimen>
+    <dimen name="fragment_signup_with_email__btn__signup__margin_start">36dp</dimen>
+    <dimen name="fragment_signup_with_email__btn__signup__margin_top">32dp</dimen>
+    <dimen name="fragment_signup_with_email__btn__signup__margin_end">36dp</dimen>
+    <dimen name="fragment_signup_with_email__btn__signup_google__margin_start">36dp</dimen>
+    <dimen name="fragment_signup_with_email__btn__signup_google__margin_top">32dp</dimen>
+    <dimen name="fragment_signup_with_email__btn__signup_google__margin_end">36dp</dimen>
+
+    <dimen name="toolbar__custom_toolbar__img__menu__size">56dp</dimen>
+    <dimen name="toolbar__custom_toolbar__img__menu__padding">16dp</dimen>
+
+    <dimen name="fragment_home_finances__constraint__list_movement__background__radius">24dp</dimen>
+    <dimen name="fragment_home_finances__label__balance__margin_start">24dp</dimen>
+    <dimen name="fragment_home_finances__label__balance__margin_top">28dp</dimen>
+    <dimen name="fragment_home_finances__label__balance_available__margin_start">24dp</dimen>
+    <dimen name="fragment_home_finances__constraint__movement__margin_top">44dp</dimen>
+    <dimen name="fragment_home_finances__constraint__movement__padding_bottom">56dp</dimen>
+    <dimen name="fragment_home_finances__label__recent_movement__margin_start">24dp</dimen>
+    <dimen name="fragment_home_finances__label__recent_movement__margin_top">24dp</dimen>
+    <dimen name="fragment_home_finances__list__recent_movement__margin_top">12dp</dimen>
+
+    <dimen name="fragment_host_finance__btn__add__border_width">0dp</dimen>
+    <dimen name="fragment_host_finance__bottom_app_bar__navigation__fab_cardle_margin">8dp</dimen>
+    <dimen name="fragment_host_finance__bottom_app_bar__navigation__fab_cardle_rounded_radius">12dp</dimen>
+    <dimen name="fragment_host_finance__bottom_app_bar__navigation__fab_cardle_vertical_offset">4dp</dimen>
+    <dimen name="fragment_host_finance__bottom_navigation_view__navigation__margin_end">16dp</dimen>
+
+    <dimen name="toolbar__custom_toolbar__label__name_wallet__padding_start">24dp</dimen>
+    <dimen name="toolbar__custom_toolbar__label__name_wallet__padding_end">24dp</dimen>
+    <dimen name="toolbar__custom_toolbar__img__wallets__size">56dp</dimen>
+    <dimen name="toolbar__custom_toolbar__img__wallets__padding">16dp</dimen>
+    <dimen name="toolbar__custom_toolbar__img__notification__size">56dp</dimen>
+    <dimen name="toolbar__custom_toolbar__img__notification__padding">16dp</dimen>
+
+    <dimen name="row__day_movement__label__day__margin_start">12dp</dimen>
+    <dimen name="row__day_movement__label__day__margin_top">12dp</dimen>
+    <dimen name="row__day_movement__label__day__margin_bottom">12dp</dimen>
+
+    <dimen name="row__movement__margin_start">20dp</dimen>
+    <dimen name="row__movement__margin_end">20dp</dimen>
+    <dimen name="row__movement__img__icon__size">56dp</dimen>
+    <dimen name="row__movement__img__icon__margin">12dp</dimen>
+    <dimen name="row__movement__img__icon__padding">12dp</dimen>
+    <dimen name="row__movement__img__icon_shared__margin_top">-6dp</dimen>
+    <dimen name="row__movement__img__icon_shared__margin_start">-6dp</dimen>
+    <dimen name="row__movement__label__category__margin_start">12dp</dimen>
+    <dimen name="row__movement__label__category__margin_top">4dp</dimen>
+    <dimen name="row__movement__label__amount__margin_end">12dp</dimen>
+    <dimen name="row__movement__label__description__margin_start">12dp</dimen>
+    <dimen name="row__movement__label__description__margin_bottom">4dp</dimen>
+    <dimen name="row__movement__label__hour__margin_end">12dp</dimen>
+    <dimen name="row__movement__background__radius">12dp</dimen>
+    <dimen name="row__movement__img__icon__background__radius">8dp</dimen>
+
+    <dimen name="background_bottons_black__pressed__radius">16dp</dimen>
+    <dimen name="background_bottons_black__unpressed__radius">16dp</dimen>
+    <dimen name="background_bottons_gradiant_green__radius">16dp</dimen>
+
+    <dimen name="feature_login__background_textview__focused__radius">6dp</dimen>
+    <dimen name="feature_login__background_textview__focused__border_size">2dp</dimen>
+
+    <dimen name="feature_login__background_textview__unfocused__radius">6dp</dimen>
+    <dimen name="feature_login__background_textview__unfocused__border_size">2dp</dimen>
+
+
+    <dimen name="fragment_presentation_on_boarding__label__title__text_size">28sp</dimen>
+    <dimen name="fragment_presentation_on_boarding__label__description__text_size">16sp</dimen>
+
+    <dimen name="fragment_first_data_on_boarding__label__need_create_wallet__text_size">24sp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__previous__text_size">20sp</dimen>
+    <dimen name="fragment_first_data_on_boarding__label__next__text_size">20sp</dimen>
+
+    <dimen name="fragment_signup_with_email__btn__signup__text_size">16sp</dimen>
+
+    <dimen name="fragment_home_finances__label__balance__text_size">40sp</dimen>
+    <dimen name="fragment_home_finances__label__balance_available__text_size">16sp</dimen>
+    <dimen name="fragment_home_finances__label__recent_movement__text_size">20sp</dimen>
+
+    <dimen name="row__day_movement__label__day__text_size">18sp</dimen>
+
+    <dimen name="row__movement__label__category__text_size">18sp</dimen>
+    <dimen name="row__movement__label__amount__text_size">18sp</dimen>
+    <dimen name="row__movement__label__description__text_size">14sp</dimen>
+    <dimen name="row__movement__label__hour__text_size">14sp</dimen>
+
+
+    <item name="fragment_splash_login__guideline__1__percent" format="float" type="dimen">0.2</item>
+    <item name="fragment_splash_login__guideline__2__percent" format="float" type="dimen">0.8</item>
+    <item name="fragment_splash_login__guideline__3__percent" format="float" type="dimen">0.7</item>
+    <item name="fragment_splash_login__guideline__4__percent" format="float" type="dimen">0.3</item>
 </resources>

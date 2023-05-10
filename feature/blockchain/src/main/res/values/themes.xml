@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.AdultingExpenseManagement" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">#000000</item>
+        <item name="colorOnPrimary">#000000</item>
+
+        <item name="colorSecondary">@color/red1</item>
+        <item name="colorSecondaryVariant">@color/red</item>
+        <item name="colorOnSecondary">@color/red</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="BtnGradientGreen">
+        <item name="android:background">@drawable/background_bottons_gradiant_green</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="BtnBlack">
+        <item name="android:background">@drawable/background_bottons_black</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="InputLayoutGradiantGreen">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="hintTextColor">@color/black</item>
+        <item name="endIconTint">#FFFFFF</item>
+    </style>
+
+    <style name="EditTextGradiantGreen">
+        <item name="android:background">@drawable/feature_login__background_textview</item>
+    </style>
+</resources>

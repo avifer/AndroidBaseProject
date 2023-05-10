@@ -4,4 +4,83 @@
     <string name="fragment_home__toolbar__toolbar__title">Blockchain</string>
     <string name="icon_money">%s €</string>
     <string name="icon_dolar">%s $</string>
+    <string name="app_name">Adulting Gestión de la vida adulta</string>
+
+    <string name="login">Iniciar sesión</string>
+    <string name="loginWithGoogle">Iniciar con google</string>
+    <string name="signup">Registrarse</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="remember_me">Recuerdame</string>
+    <string name="after">Siguiente</string>
+    <string name="before">Anterior</string>
+    <string name="ask__dont_have_account">¿No tienes una cuenta?</string>
+    <string name="ask__have_account">¿Tienes una cuenta?</string>
+    <string name="ask__want_exit">¿Desea salir?</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="add">Añadir</string>
+    <string name="income">Ingresos</string>
+    <string name="expense">Gastos</string>
+    <string name="empty"></string>
+
+    <string name="money">%s €</string>
+    <string name="income_with_money">+ %s €</string>
+    <string name="expense_with_money">- %s €</string>
+
+    <string name="statistics">Estadisticas</string>
+    <string name="friends">Amigos</string>
+    <string name="home">Inicio</string>
+    <string name="debts">Deudas</string>
+
+    <string name="format_hour">%s:%s</string>
+
+
+    <string name="fragment_select_login__btn__login_google__text">@string/loginWithGoogle</string>
+
+    <string name="fragment_signup_with_email__btn__signup_google__text">@string/loginWithGoogle</string>
+
+    <string name="fragment_presentation_on_boarding__label__title__text">¡Bienvenido!</string>
+    <string name="fragment_presentation_on_boarding__label__description__text">Bienvenido a Adulting. Empecemos con unos pasos previos antes de iniciar la aventura donde te enseñare los conceptos basicos.</string>
+
+    <string name="fragment_first_data_on_boarding__label__need_create_wallet__text">Para empezar necesitamos crear una billetera.</string>
+    <string name="fragment_first_data_on_boarding__text_layout__name_wallet__hint">Introduce nombre para la billetera</string>
+    <string name="fragment_first_data_on_boarding__text_layout__balance_wallet__hint">Introduce saldo inicial para la billetera.</string>
+
+    <string name="fragment_home_finances__label__balance_available__text">Saldo disponible</string>
+    <string name="fragment_home_finances__label__recent_movement__text">Movimientos recientes</string>
+
+
+    <string name="category_delivery_food">Comida a domicilio</string>
+    <string name="category_game">Videojuegos</string>
+    <string name="category_gym">Gimnasio</string>
+    <string name="category_gift">Regalos</string>
+    <string name="category_travel">Viajes</string>
+    <string name="category_phone">Telefono</string>
+    <string name="category_restaurant">Restaurante</string>
+    <string name="category_energy">Energia</string>
+    <string name="category_work">Trabajo</string>
+    <string name="category_medication">Medicamentos</string>
+    <string name="category_shop_online">Compras online</string>
+    <string name="category_transport">Transporte</string>
+    <string name="category_home">Casa</string>
+
+    <string name="today">Hoy</string>
+    <string name="yesterday">Ayer</string>
+    <string name="format_date_same_year">%s de %s</string>
+    <string name="format_date_different_year">%s de %s %s</string>
+
+    <string name="january">Enero</string>
+    <string name="february">Febrero</string>
+    <string name="march">Marzo</string>
+    <string name="april">Abril</string>
+    <string name="may">Mayo</string>
+    <string name="june">Junio</string>
+    <string name="july">Julio</string>
+    <string name="august">Agosto</string>
+    <string name="september">Septiembre</string>
+    <string name="october">Octubre</string>
+    <string name="november">Noviembre</string>
+    <string name="december">Diciembre</string>
 </resources>

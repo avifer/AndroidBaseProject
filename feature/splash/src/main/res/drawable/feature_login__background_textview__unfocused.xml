@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/grey1" />
+            <corners android:radius="@dimen/feature_login__background_textview__focused__radius" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="@dimen/feature_login__background_textview__focused__border_size"
+        android:left="@dimen/feature_login__background_textview__focused__border_size"
+        android:right="@dimen/feature_login__background_textview__focused__border_size"
+        android:top="@dimen/feature_login__background_textview__focused__border_size">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/feature_login__background_textview__focused__radius" />
+            <solid android:color="@color/grey1" />
+        </shape>
+    </item>
+
+</layer-list>

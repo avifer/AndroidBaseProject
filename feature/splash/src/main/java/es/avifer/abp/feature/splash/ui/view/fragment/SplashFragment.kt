@@ -20,7 +20,9 @@ class SplashFragment : BaseFragment() {
         FragmentSplashBinding.inflate(inflater, container, false)
 
     override fun onViewReady(savedInstanceState: Bundle?) {
-        viewModel.goToBlockchain(getVersionName()) { openAppInGooglePlay() }
+        getBindingCast()?.fragmentSignupWithEmailBtnSignup?.setOnClickListener {
+            viewModel.goToBlockchain()
+        }
     }
 
 }
